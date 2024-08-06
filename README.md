@@ -14,6 +14,7 @@ An interface defines a contract that classes can implement. It contains method s
 
 ### Repository Pattern
 The Repository Pattern is a design pattern that mediates data from and to the domain and data access layers. Repositories provide a way to manage and access data while separating the business logic from the data access code. This promotes a clean architecture and makes the code easier to maintain and test.
+- Understanding the Repository Pattern [Medium Article](https://medium.com/@chandrashekharsingh25/understanding-the-repository-pattern-in-c-net-with-examples-51f02c4074ba)
 
 ## Instructions
 
