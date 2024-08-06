@@ -2,12 +2,12 @@
 
 ## Overview
 
-This project will guide you through implementing CRUD (Create, Read, Update, Delete) operations for the BookStore service. You will also learn how to write unit tests for these operations using xUnit and Moq.
+This project will guide you through implementing CRUD (Create, Read, Update, Delete) operations for the BookStore repository. You will also learn how to write unit tests for these operations using xUnit and Moq.
 
 ## Definitions
 
 ### Dependency Injection
-Dependency Injection (DI) is a design pattern used to implement IoC (Inversion of Control). It allows the creation of dependent objects outside of a class and provides those objects to a class through different ways. The main aim of DI is to decouple the instantiation of objects from the class that uses them.
+Dependency Injection (DI) is a design pattern used to implement IoC (Inversion of Control). It allows the creation of dependent objects outside of a class and provides those objects to a class in different ways. The main aim of DI is to decouple the instantiation of objects from the class that uses them.
 
 ### Interfaces
 An interface defines a contract that classes can implement. It contains method signatures without implementations. Classes that implement the interface must provide concrete implementations for all its methods. Interfaces help in achieving abstraction and are used extensively in dependency injection and mocking.
@@ -70,3 +70,7 @@ The Repository Pattern is a design pattern that mediates data from and to the do
 3. **Create Unit Tests for CRUD Operations:**
    - Navigate to the `BookStore.Tests` project.
    - Create unit tests for each CRUD operation in the `BookRepository` class.
+
+4. **Stretch Goals**
+   - Add a Minimal API project to your solution that injects the IBookService as a dependency to use it
+   - Add Entity Framework Core to your project
