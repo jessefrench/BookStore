@@ -80,3 +80,6 @@ The Repository Pattern is a design pattern that mediates data from and to the do
    - Add a Minimal API project to your solution that injects the IBookService as a dependency to use it
    - Add Entity Framework Core to your project to do all these actions to your database (outside of unit testing)
    - Add Front-End to your application
+  
+### Resources
+- [Unit testing with MSTest learning Module on Microsoft](https://learn.microsoft.com/en-us/training/modules/visual-studio-test-tools/)
