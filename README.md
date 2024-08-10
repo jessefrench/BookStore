@@ -7,10 +7,11 @@ This project will guide you through implementing CRUD (Create, Read, Update, Del
 ## Definitions
 
 ### Dependency Injection
-Dependency Injection (DI) is a design pattern used to implement IoC (Inversion of Control). It allows the creation of dependent objects outside of a class and provides those objects to a class in different ways. The main aim of DI is to decouple the instantiation of objects from the class that uses them.
+Dependency Injection (DI) is a design pattern used to implement IoC (**Inversion of Control**). It allows the creation of dependent objects outside of a class and provides those objects to a class in different ways. The main aim of DI is to decouple the instantiation of objects from the class that uses them.
+- Understanding Dependency Injection [Medium Article](https://medium.com/@avinash.dhumal/understanding-dependency-injection-a-practical-guide-with-c-examples-aee44eacee32)
 
 ### Interfaces
-An interface defines a contract that classes can implement. It contains method signatures without implementations. Classes that implement the interface must provide concrete implementations for all its methods. Interfaces help in achieving abstraction and are used extensively in dependency injection and mocking.
+An interface defines a contract that classes can implement. It contains method signatures without implementations. Classes that implement the interface **must** provide concrete implementations for all its methods. Interfaces help in achieving **abstraction** and are used extensively in dependency injection and mocking.
 
 ### Repository Pattern
 The Repository Pattern is a design pattern that mediates data from and to the domain and data access layers. Repositories provide a way to manage and access data while separating the business logic from the data access code. This promotes a clean architecture and makes the code easier to maintain and test.
@@ -70,6 +71,10 @@ The Repository Pattern is a design pattern that mediates data from and to the do
 3. **Create Unit Tests for CRUD Operations:**
    - Navigate to the `BookStore.Tests` project.
    - Create unit tests for each CRUD operation in the `BookRepository` class.
+
+### Running Unit Tests
+- In Visual Studio, right-click on the test file and select "Run Tests"
+- To run just one test in your test file, right-click on the test method itself and select "Run Tests"
 
 4. **Stretch Goals**
    - Add a Minimal API project to your solution that injects the IBookService as a dependency to use it
