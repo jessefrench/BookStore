@@ -32,37 +32,37 @@ The Repository Pattern is a design pattern that mediates data from and to the do
 
 #### BookRepository - CRUD Methods
 
-- **AddBook Method:**
-  - Implement a method to add a new book to the repository.
+- **GetAllBooks Method:**
+  - Implement a method to retrieve all books
 
 - **GetBookById Method:**
-  - Implement a method to retrieve a book by its ID from the repository.
-
-- **GetAllBooks Method:**
-  - Implement a method to retrieve all books from the repository.
+  - Implement a method to retrieve a book by its ID
+    
+- **AddBook Method:**
+  - Implement a method to add a new book
 
 - **UpdateBook Method:**
-  - Implement a method to update an existing book in the repository.
+  - Implement a method to update an existing book
 
 - **DeleteBook Method:**
-  - Implement a method to delete a book from the repository by its ID.
+  - Implement a method to delete a book by its ID
 
 #### BookService - CRUD Methods
 
-- **AddBook Method:**
-  - Implement a method to add a new book using the repository.
+- **GetAllBooks Method:**
+  - Implement a method to retrieve all books using the injected repository
 
 - **GetBookById Method:**
-  - Implement a method to retrieve a book by its ID using the repository.
-
-- **GetAllBooks Method:**
-  - Implement a method to retrieve all books using the repository.
+  - Implement a method to retrieve a book by its ID using the injected repository
+    
+- **AddBook Method:**
+  - Implement a method to add a new book using the injected repository
 
 - **UpdateBook Method:**
-  - Implement a method to update an existing book using the repository.
+  - Implement a method to update an existing book using the injected repository
 
 - **DeleteBook Method:**
-  - Implement a method to delete a book by its ID using the repository.
+  - Implement a method to delete a book by its ID using the injected repository
 
 **Make sure you create the methods in the corresponding interfaces for the BookService and BookRepository first before implementing them in the actual classes**
 
@@ -76,6 +76,7 @@ The Repository Pattern is a design pattern that mediates data from and to the do
 - In Visual Studio, right-click on the test file and select "Run Tests"
 - To run just one test in your test file, right-click on the test method itself and select "Run Tests"
 
-4. **Stretch Goals**
+4. **Stretch Goals (During & After NSS)**
    - Add a Minimal API project to your solution that injects the IBookService as a dependency to use it
-   - Add Entity Framework Core to your project
+   - Add Entity Framework Core to your project to do all these actions to your database (outside of unit testing)
+   - Add Front-End to your application
