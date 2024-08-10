@@ -6,17 +6,14 @@ namespace BookStore.Tests
     public class BookServiceTests
     {
         // The BookService class is dependent on the IBookRepository interface.
-        // We do not need to mock the Book class because it is a simple POCO class.
-        // A POCO class is a class that does not depend on any external framework or library.
-        // POCO stands for Plain Old CLR Object.
-        // CLR stands for Common Language Runtime.
-        // All POCO means is that the class is a simple class with properties and methods.
+        // We do not need to mock the Book class because it is a simple class.
         private readonly BookService _bookService;
 
         // The Mock class is used to create a mock object of the IBookRepository interface.
         // Mock objects are used to simulate the behavior of real objects.
         // Mock objects are used in unit testing to isolate the code under test.
         // We are mocking the IBookRepository interface because we do not want to test the actual implementation of the BookRepository class.
+        // Mock just means that we are creating a fake object that simulates the behavior of the real object.
         private readonly Mock<IBookRepository> _mockBookRepository;
 
         public BookServiceTests()
@@ -29,7 +26,6 @@ namespace BookStore.Tests
         public void GetBookDetails_ShouldReturnBook_WhenBookExists()
         {
             // Arrange - means to set up the test
-            // The book with Id 1 is "1984" by George Orwell
             var bookId = 1;
 
             // Here, we are creating an instance of the Book class with the Id, Title, and Author properties set.
