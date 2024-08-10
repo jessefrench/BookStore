@@ -50,19 +50,19 @@ The Repository Pattern is a design pattern that mediates data from and to the do
 #### BookService - CRUD Methods
 
 - **GetAllBooks Method:**
-  - Implement a method to retrieve all books using the injected repository
+  - Implement a method to retrieve all books using the injected repository interface
 
 - **GetBookById Method:**
-  - Implement a method to retrieve a book by its ID using the injected repository
+  - Implement a method to retrieve a book by its ID using the injected repository interface
     
 - **AddBook Method:**
-  - Implement a method to add a new book using the injected repository
+  - Implement a method to add a new book using the injected repository interface
 
 - **UpdateBook Method:**
-  - Implement a method to update an existing book using the injected repository
+  - Implement a method to update an existing book using the injected repository interface
 
 - **DeleteBook Method:**
-  - Implement a method to delete a book by its ID using the injected repository
+  - Implement a method to delete a book by its ID using the injected repository interface
 
 **Make sure you create the methods in the corresponding interfaces for the BookService and BookRepository first before implementing them in the actual classes**
 
