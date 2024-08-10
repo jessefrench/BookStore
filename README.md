@@ -82,4 +82,4 @@ The Repository Pattern is a design pattern that mediates data from and to the do
    - Add Front-End to your application
   
 ### Resources
-- [Unit testing with MSTest learning Module on Microsoft](https://learn.microsoft.com/en-us/training/modules/visual-studio-test-tools/)
+- [Unit testing with MSTest learning module on Microsoft](https://learn.microsoft.com/en-us/training/modules/visual-studio-test-tools/)
