@@ -66,5 +66,76 @@ namespace BookStore.Tests
             // The actualBook returned by the GetBookById method should be null.
             Assert.Null(actualBook);
         }
+
+        [Fact]
+        public void GetAllBooks_ShouldReturnAllBooks()
+        {
+            var expectedBooks = new List<Book>
+            {
+                new Book { Id = 1, Title = "1984", Author = "George Orwell" },
+                new Book { Id = 2, Title = "To Kill a Mockingbird", Author = "Harper Lee" }
+            };
+            _mockBookRepository.Setup(repo => repo.GetAllBooks()).Returns(expectedBooks);
+
+            var actualBooks = _bookService.GetAllBooks();
+
+            Assert.Equal(expectedBooks, actualBooks);
+        }
+
+        [Fact]
+        public void AddBook_ShouldReturnNewBookId()
+        {
+            var newBook = new Book { Title = "New Book", Author = "New Author" };
+            var newBookId = 3;
+            _mockBookRepository.Setup(repo => repo.AddBook(newBook)).Returns(newBookId);
+
+            var actualBookId = _bookService.AddBook(newBook);
+
+            Assert.Equal(newBookId, actualBookId);
+        }
+
+        [Fact]
+        public void UpdateBook_ShouldReturnTrue_WhenBookExists()
+        {
+            var updatedBook = new Book { Id = 1, Title = "Updated Title", Author = "Updated Author" };
+            _mockBookRepository.Setup(repo => repo.UpdateBook(updatedBook)).Returns(true);
+
+            var result = _bookService.UpdateBook(updatedBook);
+
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void UpdateBook_ShouldReturnFalse_WhenBookDoesNotExist()
+        {
+            var updatedBook = new Book { Id = 99, Title = "Non-existent Book", Author = "Non-existent Author" };
+            _mockBookRepository.Setup(repo => repo.UpdateBook(updatedBook)).Returns(false);
+
+            var result = _bookService.UpdateBook(updatedBook);
+
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void DeleteBook_ShouldReturnTrue_WhenBookExists()
+        {
+            var bookId = 1;
+            _mockBookRepository.Setup(repo => repo.DeleteBook(bookId)).Returns(true);
+
+            var result = _bookService.DeleteBook(bookId);
+
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void DeleteBook_ShouldReturnFalse_WhenBookDoesNotExist()
+        {
+            var bookId = 99;
+            _mockBookRepository.Setup(repo => repo.DeleteBook(bookId)).Returns(false);
+
+            var result = _bookService.DeleteBook(bookId);
+
+            Assert.False(result);
+        }
     }
 }

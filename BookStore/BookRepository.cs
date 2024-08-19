@@ -25,10 +25,38 @@ namespace BookStore
             { 5, new Book { Id = 5, Title = "Pride and Prejudice", Author = "Jane Austen" } }
         };
 
+        public List<Book> GetAllBooks()
+        {
+            return books.Values.ToList();
+        }
+        
         public Book GetBookById(int id)
         {
             books.TryGetValue(id, out var book);
             return book;
+        }
+
+        public int AddBook(Book newBook)
+        {
+            int newId = books.Keys.Max() + 1;
+            newBook.Id = newId;
+            books.Add(newId, newBook);
+            return newId;
+        }
+
+        public bool UpdateBook(Book updatedBook)
+        {
+            if (books.ContainsKey(updatedBook.Id))
+            {
+                books[updatedBook.Id] = updatedBook;
+                return true;
+            }
+            return false;
+        }
+
+        public bool DeleteBook(int id)
+        {
+            return books.Remove(id);
         }
     }
 }
