@@ -1,6 +1,7 @@
-﻿namespace BookStore
-{
+﻿using static System.Reflection.Metadata.BlobBuilder;
 
+namespace BookStore
+{
     // This is the BookService class
     // The BookService class is responsible for getting the book data from the repository
     // The BookService class is dependent on the IBookRepository interface (dependency injection)
@@ -21,9 +22,29 @@
             _bookRepository = bookRepository;
         }
 
+        public List<Book> GetAllBooks()
+        {
+            return _bookRepository.GetAllBooks();
+        }
+
         public Book GetBookById(int id)
         {
             return _bookRepository.GetBookById(id);
+        }
+
+        public int AddBook(Book newBook)
+        {
+            return _bookRepository.AddBook(newBook);
+        }
+
+        public bool UpdateBook(Book updatedBook)
+        {
+            return _bookRepository.UpdateBook(updatedBook);
+        }
+
+        public bool DeleteBook(int id)
+        {
+            return _bookRepository.DeleteBook(id);
         }
     }
 }
